@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Flight Android App</string>
+    <string name="connect">Connect</string>
+    <string name="ip">IP</string>
+    <string name="port">Port</string>
+
+</resources>
