@@ -14,6 +14,18 @@
     android:layout_height="match_parent"
     tools:context=".views.MainActivity">
 
+        <com.example.flightandroidapp.views.Joystick
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/joystick"
+            android:id="@+id/joystick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.671" />
+
         <Button
             android:id="@+id/connect_button"
             android:layout_width="wrap_content"
@@ -70,10 +82,10 @@
             android:progress="50"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.587"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.859" />
+            app:layout_constraintVertical_bias="0.813" />
 
         <SeekBar
             android:id="@+id/throttle"
@@ -88,5 +100,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.668" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

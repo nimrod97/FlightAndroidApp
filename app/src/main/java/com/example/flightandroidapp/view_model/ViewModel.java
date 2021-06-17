@@ -9,10 +9,10 @@ import java.io.IOException;
 
 public class ViewModel {
     private FGPlayer model;
-    private double VM_throttle;
-    private double VM_rudder;
-    private double VM_ailerone;
-    private double VM_elevator;
+    private float VM_throttle;
+    private float VM_rudder;
+    private float VM_ailerone;
+    private float VM_elevator;
 
     public ViewModel(){
         this.model=FGPlayer.getFgPlayer();
@@ -20,12 +20,26 @@ public class ViewModel {
     public void VM_connect(String ip, String port) throws Exception {
         this.model.connect(ip, port);
     }
-    public void setVM_throttle(double val){
+    public void setVM_throttle(float val){
         this.VM_throttle=val;
         this.model.sendToFg("throttle",this.VM_throttle);
     }
-    public void setVM_rudder(double val){
+    public void setVM_rudder(float val){
         this.VM_rudder=val;
         this.model.sendToFg("rudder",this.VM_rudder);
+    }
+
+    public void setVM_ailerone(float val) {
+        this.VM_ailerone = val;
+        this.model.sendToFg("ailerone",this.VM_ailerone);
+    }
+
+    public void setVM_elevator(float val) {
+        this.VM_elevator = val;
+        this.model.sendToFg("elevator",this.VM_elevator);
+
+    }
+    public void VM_destroy(){
+        this.model.disconnect();
     }
 }
