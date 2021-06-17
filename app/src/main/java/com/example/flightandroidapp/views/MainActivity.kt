@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.SeekBar
+import android.widget.TextView
 import com.example.flightandroidapp.R
 import com.example.flightandroidapp.model.FGPlayer
 import com.example.flightandroidapp.view_model.ViewModel
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private var joystick: Joystick?=null
     private var throttle: SeekBar?= null
     private var rudder: SeekBar? =null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,14 +27,16 @@ class MainActivity : AppCompatActivity() {
         rudder=findViewById<SeekBar>(R.id.rudder)
         throttle?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seek: SeekBar?, p1: Int, p2: Boolean) {
-                val old_val=p1
-                val old_min=0
-                val old_max=100
-                val new_min=0
-                val new_max=1
-                val new_val: Double
-                new_val= (((old_val-old_min)/(old_max-old_min)) * (new_max-new_min) +new_min).toDouble()
-                viewModel!!.setVM_throttle(new_val)
+//                val old_val=p1
+//                val old_min=0
+//                val old_max=100
+//                val new_min=0
+//                val new_max=1
+//                val new_val: Double
+//                new_val= (((old_val-old_min)/(old_max-old_min)) * (new_max-new_min) +new_min).toDouble()
+//                viewModel!!.setVM_throttle(new_val)
+                val throttleText = findViewById<TextView>(R.id.throttle_text)
+                throttleText.text = p1.toString()
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {

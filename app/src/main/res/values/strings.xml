@@ -3,5 +3,7 @@
     <string name="connect">Connect</string>
     <string name="ip">IP</string>
     <string name="port">Port</string>
+    <string name="throttle">Throttle</string>
+    <string name="rudder">Rudder</string>
 
 </resources>
