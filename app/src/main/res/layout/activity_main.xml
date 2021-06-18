@@ -15,16 +15,20 @@
     tools:context=".views.MainActivity">
 
         <com.example.flightandroidapp.views.Joystick
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/joystick"
             android:id="@+id/joystick"
+            android:layout_width="366dp"
+            android:layout_height="422dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="370dp"
+            android:layout_marginRight="75dp"
+            android:layout_marginBottom="740dp"
+            android:contentDescription="@string/joystick"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.671" />
+            app:layout_constraintVertical_bias="0.269" />
 
         <Button
             android:id="@+id/connect_button"
@@ -76,30 +80,31 @@
 
         <SeekBar
             android:id="@+id/rudder"
-            android:layout_width="200dp"
+            android:layout_width="146dp"
             android:layout_height="19dp"
             android:max="100"
-            android:progress="50"
+            android:min="-100"
+            android:progress="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.587"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.813" />
+            app:layout_constraintVertical_bias="0.844" />
 
         <SeekBar
             android:id="@+id/throttle"
-            android:layout_width="200dp"
-            android:layout_height="19dp"
+            android:layout_width="146dp"
+            android:layout_height="185dp"
             android:max="100"
-            android:progress="50"
+            android:progress="0"
             android:rotation="270"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.007"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.668" />
+            app:layout_constraintVertical_bias="0.708" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,19 +1,9 @@
 package com.example.flightandroidapp.model;
 
-import android.text.Editable;
-import android.widget.EditText;
-
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 
 public class FGPlayer{
-    private double aileron;
-    private double elevator;
-    private double rudder;
-    private double throttle;
     private Socket socket;
     private PrintWriter out;
     private String message=null;
@@ -75,8 +65,6 @@ public class FGPlayer{
         else
             message+="/flight";
         message+="/"+type+" "+Double.toString(val)+"\r\n";
-//        out.print(this.message+" "+Double.toString(val)+"\r\n");
-//        out.flush();
     }
 
 
