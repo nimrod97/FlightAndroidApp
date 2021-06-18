@@ -16,7 +16,7 @@ public class FGPlayer{
     public static FGPlayer getFgPlayer(){
         return HelperHolder.fg;
     }
-    public void connect(String ip, String port) throws Exception {
+    public void connect(String ip, String port)  {
         thread=new Thread(new Runnable() {
             @Override
             public void run() {
@@ -58,13 +58,13 @@ public class FGPlayer{
         }
         catch (Exception e){}
     }
-    public void sendToFg(String type, double val){
+    public void sendToFg(String type, float val){
         message= "set /controls";
         if(type.equals("throttle"))
             message+="/engines/current-engine";
         else
             message+="/flight";
-        message+="/"+type+" "+Double.toString(val)+"\r\n";
+        message+="/"+type+" "+Float.toString(val)+"\r\n";
     }
 
 
