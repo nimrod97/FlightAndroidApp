@@ -31,6 +31,7 @@ public class ViewModel {
         this.VM_elevator=e;
         this.model.sendToFg("aileron","elevator",this.VM_aileron,this.VM_elevator);
     }
+
     public void VM_destroy(){
         this.model.disconnect();
     }
