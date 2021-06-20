@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         joystick?.setOnTouchListener(object : View.OnTouchListener{
             override fun onTouch(p0: View?, p1: MotionEvent?): Boolean {
                 if(joystick!!.onTouchEvent(p1)==true){
-                    aileron= joystick!!.dx/joystick!!.outerRadius;
-                    elevator= joystick!!.dy /joystick!!.outerRadius * (-1);
+                    aileron= joystick!!.dx/(joystick!!.outerRadius-joystick!!.innerRadius);
+                    elevator= joystick!!.dy /((joystick!!.outerRadius-joystick!!.innerRadius) * (-1));
                     viewModel?.set_joystick_elements(aileron,elevator)
                 }
                 return true

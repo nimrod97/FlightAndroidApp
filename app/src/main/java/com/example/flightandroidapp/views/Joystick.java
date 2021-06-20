@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.SurfaceView;
 import android.view.View;
 
 public class Joystick extends View {
@@ -43,8 +42,8 @@ public class Joystick extends View {
         paint2.setStyle(Paint.Style.FILL);
         paint3=new Paint();
         paint3.setColor(Color.BLACK);
-        paint3.setStrokeWidth(15F);
         paint3.setStyle(Paint.Style.STROKE);
+        paint3.setStrokeWidth(15F);
         this.moveJoystick = false;
         this.innerRadius = 100;
         this.outerRadius = 350;
@@ -63,7 +62,6 @@ public class Joystick extends View {
             defaultX=getWidth()/2;
             defaultY=getHeight()/2;
             backToDefaultAxes();
-            canvas.drawCircle(defaultX,defaultY,outerRadius,paint2);
         }
         canvas.drawCircle(defaultX,defaultY,outerRadius,paint2);
         canvas.drawCircle(defaultX,defaultY,outerRadius,paint3);
@@ -81,8 +79,6 @@ public class Joystick extends View {
         float newY=event.getY();
         switch (event.getActionMasked()) {
             case MotionEvent.ACTION_DOWN:
-                System.out.println("defaultX: " + defaultX + ",defaultT: " + defaultY);
-                System.out.println("x: " + newX + ",y: " + newY);
                 if(isInside(newX,newY, innerRadius))
                     moveJoystick=true;
                 break;
@@ -150,6 +146,9 @@ public class Joystick extends View {
 
     public float getOuterRadius() {
         return this.outerRadius;
+    }
+    public float getInnerRadius(){
+        return this.innerRadius;
     }
 
 }
