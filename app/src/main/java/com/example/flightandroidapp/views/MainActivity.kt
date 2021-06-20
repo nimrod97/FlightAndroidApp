@@ -21,20 +21,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        viewModel = ViewModel()
         joystick=findViewById<com.example.flightandroidapp.views.Joystick>(R.id.joystick)
         joystick?.setOnTouchListener(object : View.OnTouchListener{
             override fun onTouch(p0: View?, p1: MotionEvent?): Boolean {
                 if(joystick!!.onTouchEvent(p1)==true){
                     aileron= joystick!!.dx/300
-                    elevator= joystick!!.dy /-300
-                    viewModel?.setVM_aileron(aileron)
-                    viewModel?.setVM_elevator(elevator)
+                    elevator= joystick!!.dy /-200
+                    viewModel?.set_joystick_elements(aileron,elevator)
                 }
                 return true
             }
         })
-
-        viewModel = ViewModel()
         throttle = findViewById<SeekBar>(R.id.throttle)
         rudder = findViewById<SeekBar>(R.id.rudder)
         throttle?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {

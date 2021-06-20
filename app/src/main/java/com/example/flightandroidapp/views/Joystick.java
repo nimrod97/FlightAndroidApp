@@ -80,24 +80,26 @@ public class Joystick extends View{
                     dy=0;
                     return true;
                 }
-                dx=newX-x;
-                dy=newY-y;
+                dx=newX-defaultX;
+                dy=newY-defaultY;
                 if(dx>300)
                     dx=300;
                 else if(dx<-300)
                     dx=-300;
-                if(dy>300)
-                    dy=300;
-                else if(dy<-300)
-                    dy=-300;
-                this.x+=dx;
-                this.y+=dy;
+                if(dy>200)
+                    dy=200;
+                else if(dy<-200)
+                    dy=-200;
+                this.x=newX;
+                this.y=newY;
                 invalidate();
                 break;
 
             case MotionEvent.ACTION_UP:
                 moveJoystick=false;
                 backToDefaultAxes();
+                dx=0;
+                dy=0;
                 invalidate();
                 break;
             default:
