@@ -19,22 +19,17 @@ public class ViewModel {
     }
     public void setVM_throttle(float val){
         this.VM_throttle=val;
-        this.model.sendToFg("throttle",this.VM_throttle);
+        this.model.sendToFg("throttle",null,this.VM_throttle,0);
     }
     public void setVM_rudder(float val){
         this.VM_rudder=val;
-        this.model.sendToFg("rudder",this.VM_rudder);
+        this.model.sendToFg("rudder",null,this.VM_rudder,0);
     }
 
-    public void setVM_aileron(float val) {
-        this.VM_aileron = val;
-        this.model.sendToFg("aileron",this.VM_aileron);
-    }
-
-    public void setVM_elevator(float val) {
-        this.VM_elevator = val;
-        this.model.sendToFg("elevator",this.VM_elevator);
-
+    public void set_joystick_elements(float a, float e){
+        this.VM_aileron=a;
+        this.VM_elevator=e;
+        this.model.sendToFg("aileron","elevator",this.VM_aileron,this.VM_elevator);
     }
     public void VM_destroy(){
         this.model.disconnect();
