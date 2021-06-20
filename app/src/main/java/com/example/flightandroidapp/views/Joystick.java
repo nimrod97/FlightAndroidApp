@@ -18,13 +18,16 @@ public class Joystick extends View{
     private float dy;
     private float radius;
     private Paint paint;
+    private Paint paint2;
     private boolean moveJoystick;
 
 
     public Joystick(Context context) {
         super(context);
         paint = new Paint();
-        paint.setColor(Color.BLUE);
+        paint.setColor(Color.BLACK);
+        paint2=new Paint();
+        paint2.setColor(Color.GRAY);
         this.moveJoystick = false;
         this.radius = 150;
         this.defaultX=0;
@@ -38,7 +41,9 @@ public class Joystick extends View{
     public Joystick(Context context, AttributeSet attrs){
         super(context,attrs);
         paint = new Paint();
-        paint.setColor(Color.BLUE);
+        paint.setColor(Color.BLACK);
+        paint2=new Paint();
+        paint2.setColor(Color.GRAY);
         this.moveJoystick = false;
         this.radius = 150;
         this.defaultX=0;
@@ -56,7 +61,9 @@ public class Joystick extends View{
             defaultX=getWidth()/2;
             defaultY=getHeight()/2+300;
             backToDefaultAxes();
+            canvas.drawCircle(defaultX,defaultY,400,paint2);
         }
+        canvas.drawCircle(defaultX,defaultY,400,paint2);
         canvas.drawCircle(x,y,this.radius,paint);
     }
 
@@ -82,14 +89,14 @@ public class Joystick extends View{
                 }
                 dx=newX-defaultX;
                 dy=newY-defaultY;
-                if(dx>300)
-                    dx=300;
-                else if(dx<-300)
-                    dx=-300;
-                if(dy>200)
-                    dy=200;
-                else if(dy<-200)
-                    dy=-200;
+                if(dx>250)
+                    dx=250;
+                else if(dx<-250)
+                    dx=-250;
+                if(dy>250)
+                    dy=250;
+                else if(dy<-250)
+                    dy=-250;
                 this.x=newX;
                 this.y=newY;
                 invalidate();
