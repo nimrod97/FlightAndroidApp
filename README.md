@@ -5,7 +5,7 @@ The app connects via tcp socket connection into the flight gear and after that y
 and also you can control the elevator and the aileron via the joystick (the x axis is the aileron and the y axis is the elevator).</br>
 ## Installation and Running
 * Open the FlightGear API or download it right [here](https://www.flightgear.org). </br>
-* On the setting add to the addional settings this command: </br>
+* On the settings add to the addional settings this command: </br>
   --telnet=socket,in,10,127.0.0.1,6400,tcp </br>
  This command tells the flight gear simulator to listen at port 6400 and in local host.
  * Download the project to your local computer, then you can run the app on an emulator or just plug your personal phone to the computer and you can run on your phone and also download it!
