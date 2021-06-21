@@ -10,7 +10,6 @@ and also you can control the elevator and the aileron via the joystick (the x ax
  This command tells the flight gear simulator to listen at port 6400 and in local host.
  * Download the project to your local computer, then you can run the app on an emulator or just plug your personal phone to the computer and you can run on your phone and also download it!
  (via developer mode). </br>
- * When openning the app, type the ip and the port that the flight gear listens at (the port will be 6400 and the ip will be the ip of your personal computer - you can find it in the cmd
- by typing ipconfig).</br>
+ * When openning the app, type the ip and the port that the flight gear listens at (the port will be 6400 and the ip will be the ip of your personal computer - you can find it in the cmd by typing ipconfig or in ubuntu by typing ifconfig).</br>
  * Enjoy your flight!
  
