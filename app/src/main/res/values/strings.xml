@@ -5,7 +5,9 @@
     <string name="port">Port</string>
     <string name="joystick">joystick</string>
     <string name="throttle_text">Throttle</string>
-    <string name="rudder_text">Rudder</string>
     <string name="rudder">Rudder</string>
+    <string name="aileron"><![CDATA[<-- Aileron -->]]></string>
+    <string name="elevator"><![CDATA[<-- Elevator -->]]></string>
+
 
 </resources>
