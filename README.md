@@ -11,5 +11,18 @@ and also you can control the elevator and the aileron via the joystick (the x ax
  * Download the project to your local computer, then you can run the app on an emulator or just plug your personal phone to the computer and you can run on your phone and also download it!
  (via developer mode). </br>
  * When openning the app, type the ip and the port that the flight gear listens at (the port will be 6400 and the ip will be the ip of your personal computer - you can find it in the terminal by typing ipconfig when using Windows or by typing ifconfig when using Linux or Mac).</br>
- * Enjoy your flight!
+ * Enjoy your flight!</br>
+
+## Implementation
+This App based on MVVM software architectural pattern that has three main parts that run it, each part with its own designated responsibilities. </br>
+The Model (FGPlayer class) interacts with FlightGear via TCP connection, continuously send commands to the flight gear in another thread (decoupling between the invoker thread and the executor thread)
+Next, the ViewModel awares to changes in elements from the view when the user inserts data, touces the screen, etc and then notifies the model about these changes by sending them as commands to flight gear that the model will use. </br>
+The View is responsible to the visibility of the app and notifies the viewmodel about changes of data of many elements in the app.</br>
  
+ ### [UML]
+<img src="">
+
+## Collaborators
+Developed by Nimrod Gabbay and Maor Malekan.</br>
+
+## Explanation video
