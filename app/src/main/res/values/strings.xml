@@ -6,5 +6,6 @@
     <string name="joystick">joystick</string>
     <string name="throttle_text">Throttle</string>
     <string name="rudder_text">Rudder</string>
+    <string name="rudder">Rudder</string>
 
 </resources>

@@ -10,9 +10,9 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".views.MainActivity">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.MainActivity">
 
         <com.example.flightandroidapp.views.Joystick
             android:id="@+id/joystick"
@@ -88,23 +88,57 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.94" />
+            app:layout_constraintVertical_bias="0.863" />
 
         <SeekBar
             android:id="@+id/throttle"
             android:layout_width="167dp"
-            android:layout_height="301dp"
-            android:layout_marginEnd="288dp"
-            android:layout_marginRight="288dp"
-            android:layout_marginBottom="4dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="272dp"
+            android:layout_marginEnd="280dp"
+            android:layout_marginRight="280dp"
+            android:layout_marginBottom="158dp"
+            android:gravity="center_horizontal"
             android:max="100"
             android:progress="0"
             android:rotation="270"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.553" />
+
+        <TextView
+            android:id="@+id/throttle_text"
+            android:layout_width="93dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="314dp"
+            android:layout_marginRight="314dp"
+            android:layout_marginBottom="184dp"
+            android:gravity="center_horizontal"
+            android:text="@string/throttle_text"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/rudder_text"
+            android:layout_width="93dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="152dp"
+            android:layout_marginRight="152dp"
+            android:layout_marginBottom="64dp"
+            android:gravity="center_horizontal"
+            android:text="@string/rudder"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
