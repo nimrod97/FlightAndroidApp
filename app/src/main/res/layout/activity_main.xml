@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="ViewModel"
             type="com.example.flightandroidapp.view_model.ViewModel" />
@@ -34,7 +36,7 @@
             android:layout_height="wrap_content"
             android:onClick="onClickFunc"
             android:text="@string/connect"
-            android:textSize="24dp"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -100,7 +102,7 @@
             android:gravity="center_horizontal"
             android:text="@string/rudder"
             android:textAlignment="center"
-            android:textSize="16dp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -131,7 +133,7 @@
             android:gravity="center_horizontal"
             android:text="@string/throttle_text"
             android:textAlignment="center"
-            android:textSize="16dp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -145,7 +147,7 @@
             android:gravity="center_horizontal"
             android:text="@string/aileron"
             android:textAlignment="center"
-            android:textSize="16dp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -160,10 +162,9 @@
             android:rotation="270"
             android:text="@string/elevator"
             android:textAlignment="center"
-            android:textSize="16dp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

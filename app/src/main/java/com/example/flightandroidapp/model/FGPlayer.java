@@ -64,15 +64,15 @@ public class FGPlayer {
         }
     }
 
-    public void sendToFg(String type,String type2 ,float val,float val2 ) {
+    public void sendToFg(String type, String type2, float val, float val2) {
         synchronized (this) {
-            if(type2!=null) // belongs to joystick
-                message="set /controls/flight/aileron "+Float.toString(val)+ " \r\n"+
-                        "set /controls/flight/elevator "+Float.toString(val2)+ " \r\n";
+            if (type2 != null) // belongs to joystick
+                message = "set /controls/flight/aileron " + Float.toString(val) + " \r\n" +
+                        "set /controls/flight/elevator " + Float.toString(val2) + " \r\n";
             else if (type.equals("throttle"))
-                message = "set /controls/engines/current-engine/throttle "+Float.toString(val)+ " \r\n";
+                message = "set /controls/engines/current-engine/throttle " + Float.toString(val) + " \r\n";
             else // rudder
-                message  = "set /controls/flight/rudder "+Float.toString(val)+" \r\n";
+                message = "set /controls/flight/rudder " + Float.toString(val) + " \r\n";
         }
 
     }
