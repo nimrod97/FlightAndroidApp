@@ -20,8 +20,8 @@ The Model (FGPlayer class) interacts with FlightGear via TCP connection, continu
 Next, the ViewModel awares to changes in elements from the view when the user inserts data, touces the screen, etc and then notifies the model about these changes by sending them as commands to flight gear that the model will use. </br>
 The View is responsible to the visibility of the app and notifies the viewmodel about changes of data of many elements in the app.</br>
  
- ### [UML]
-<img src="">
+ ### [UML](https://github.com/nimrod97/FlightAndroidApp/blob/master/Untitled%20Diagram.png)
+<img src="https://github.com/nimrod97/FlightAndroidApp/blob/master/Untitled%20Diagram.png" width="550" height="300">
 
 ## Collaborators
 Developed by Nimrod Gabbay and Maor Malekan.</br>
