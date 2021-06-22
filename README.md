@@ -1,5 +1,5 @@
 # Flight Android App
- <img width="196" alt="‏‏לכידה2" src="https://user-images.githubusercontent.com/54501031/122980162-06127380-d3a1-11eb-8997-e9ae5ba59296.PNG" width="650" height="400"></br>
+ <img width="400" height="200" alt="‏‏לכידה2" src="https://user-images.githubusercontent.com/54501031/122980162-06127380-d3a1-11eb-8997-e9ae5ba59296.PNG"></br>
 
 An android app written in Java and Kotlin (in android studio IDE) that implements a joystick that can control the airplane and fly it.</br>
 The app connects via tcp socket connection into the flight gear and after that you can control the throttle and the rudder that appear as sliders in the app, 
