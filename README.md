@@ -27,3 +27,4 @@ The View is responsible to the visibility of the app and notifies the viewmodel 
 Developed by Nimrod Gabbay and Maor Malekan.</br>
 
 ## Explanation video
+https://www.youtube.com/watch?v=U_pNqpiC6hI
